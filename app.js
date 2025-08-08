@@ -31,7 +31,8 @@ function asyncHandler(handler) {
   }
 } 
 
-mongoose.connect(process.env.DATABASE_URL)
+const dbUrl = process.env.DATABASE_URL;
+mongoose.connect(dbUrl)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error(err));
 
@@ -93,6 +94,7 @@ app.delete("/tasks/:id", asyncHandler(async (req, res) => {
   res.status(204).send();
 }));
 
-app.listen(3000, () => {
-  console.log("Server Started");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server Started on port ${port}`);
 });

@@ -1,1 +1,0 @@
-export const DATABASE_URL = 'mongodb+srv://basilry:QLWLI3dDDLqwSyDG@mongodb-cluster.aiyuhsi.mongodb.net/?retryWrites=true&w=majority&appName=mongodb-cluster';

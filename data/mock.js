@@ -19,7 +19,7 @@ const data = [
     updatedAt: new Date('2023-03-23T06:34:09.617Z'),
   },
   {
-    title: '독서',
+    title: '독서 하기',
     description: '30 페이지',
     isComplete: false,
     createdAt: new Date('2023-03-23T06:34:10.617Z'),

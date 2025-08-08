@@ -1,0 +1,37 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/tasks
+
+###
+
+GET http://localhost:3000/tasks?sort=oldest&count=3
+
+###
+
+GET http://localhost:3000/tasks/68957b2d3034b6e65daf4c72
+
+###
+
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "???: 누가 새벽 3시에 햄버거를 먹냐?",
+  "description": "그건 나였구연~"
+}
+
+###
+
+PATCH http://localhost:3000/tasks/68957b2d3034b6e65daf4c72
+Content-Type: application/json
+
+{
+  "isCompleted": true,
+  "title": "???: 누가 오후 3시에 햄버거를 먹냐?",
+  "description": "그건 당신이였구연~"
+}
+
+###
+DELETE http://localhost:3000/tasks/68957b2d3034b6e65daf4c72

@@ -5,9 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const DATABASE_URL = String(process.env.DATABASE_URL);
-
-mongoose.connect(DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL)
 
 await Task.deleteMany({});
 await Task.insertMany(data);
